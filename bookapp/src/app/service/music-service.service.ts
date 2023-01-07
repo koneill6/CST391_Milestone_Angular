@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Album } from '../models/Album';
 import { Book } from '../models/Book';
 
 @Injectable({providedIn: 'root'})
@@ -43,18 +42,9 @@ export class MusicServiceService
     });
   }
 
-  public updateAlbum(album:Album, callback:any)
-  {
-    this.http.put<Album>(this.hostname + "/albums", album)
-    .subscribe((data) =>
-    {
-      callback(data);
-    });
-  }
-
   public updateBook(book:Book, callback:any)
   {
-    this.http.put<Album>(this.hostname + "/updateBook", book)
+    this.http.put<Book>(this.hostname + "/updateBook", book)
     .subscribe((data) =>
     {
       callback(data);
