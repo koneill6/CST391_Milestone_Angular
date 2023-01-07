@@ -1,0 +1,19 @@
+<div class="list-group">
+  <div class="list-group-item" active *ngFor="let book of books">
+    <div class="list-books-table" width="800px">
+      <div class="list-books-row">
+        <span align="left" width="200px" class="list-book-title">Title: {{ book.Title }}</span>
+        <span align="left" width="100px" class="list-book-author">Author: {{ book.Author }}</span>
+        <span align="left" width="75px" class="list-book-cost">Cost: {{book.Cost}}</span>
+        <span align="left" width="75px" class="list-book-stock">Stock: {{book.Stock}}</span>
+        <span width="50px" align="center">
+          <a [routerLink]="['/edit', book.Id]"><i class="fa fa-edit"></i></a>
+        </span>
+        <span width="50px" align="center">
+          <button class="list-books-delete" (click)="deleteBook(book)"><i class="fa fa-trash"></i></button>
+        </span>
+
+      </div>
+    </div>
+  </div>
+</div>

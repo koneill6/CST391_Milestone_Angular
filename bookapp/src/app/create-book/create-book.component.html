@@ -1,0 +1,35 @@
+<div align="center" style="margin-left:50px;margin-right:50px" *ngIf="!wasSubmitted">
+
+  <form (ngSubmit)="onSubmit()" #createForm="ngForm" ngNativeValidate>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input id="author" type="text" class="form-control" placeholder="Enter the name of the author" required
+        minlength="1" maxlength="100" [(ngModel)]="book.Author" name="author">
+    </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input id="title" type="text" class="form-control" placeholder="Enter the title of the book" required
+        minlength="1" maxlength="100" [(ngModel)]="book.Title" name="title">
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <input id="genre" type="text" class="form-control" placeholder="Enter the genre of the book" required
+        minlength="1" [(ngModel)]="book.Genre" name="genre">
+    </div>
+    <div class="form-group">
+      <label for="cost">Cost</label>
+      <input id="cost" type="number" class="form-control" placeholder="Enter the cost of the book" required min="1"
+        [(ngModel)]="book.Cost" name="cost">
+    </div>
+    <div class="form-group">
+      <label for="stock">Stock</label>
+      <input id="stock" type="number" class="form-control" placeholder="Enter inventory stock of book" required
+        minlength="1" maxlength="100" [(ngModel)]="book.Stock" name="stock">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
+<div *ngIf="wasSubmitted">
+  Album was added successfully.
+</div>

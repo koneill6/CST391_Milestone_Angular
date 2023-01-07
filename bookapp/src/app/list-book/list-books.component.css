@@ -1,0 +1,38 @@
+.list-books-row{
+    display: flex;
+    column-gap: 50px;
+}
+
+.list-books-table{
+    display: flex;
+    justify-content: center;
+}
+
+.list-book-title{
+    display: flex;
+    width: 200px;
+}
+
+.list-book-author{
+    display: flex;
+    width: 150px;
+}
+
+.list-book-cost{
+    display: flex;
+    width: 100px;
+}
+
+.list-book-stock{
+    display: flex;
+    width: 100px;
+}
+
+.list-books-delete{
+    border: none;
+    background-color: white;
+}
+
+.fa-trash{
+    color: rgb(64, 148, 218);
+}
